@@ -22,3 +22,9 @@ Events in Google Calender should be in the following way:
  * For example ScaleUpFoo goes from 4:00PM to 4:00PM
 * Event description should be the server value
  * Numeric value only
+
+---
+## Example event configuration
+
+
+![example](https://raw.githubusercontent.com/freynolds/AWS-AutoScaling-Google-Calander/master/example.png "example")
