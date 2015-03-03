@@ -55,7 +55,7 @@ function getGoogleToken (callback) {
 
     var url = oauth2Client.generateAuthUrl({
         access_type: 'offline', // 'online' (default) or 'offline' (gets refresh_token)
-        scope: 'https://www.googleapis.com/auth/calendar',
+        scope: ['https://www.googleapis.com/auth/calendar'],
         approval_prompt: 'force'
     });
 
@@ -105,16 +105,16 @@ function getGoogleToken (callback) {
 
 function getCalendar() {
     calendar.events.list({
-        calendarId: config.google.calenderId,
+        calendarId: config.google.calendarId,
         timeMin: new Date().toISOString()
     }, function(err, response) {
         if (err) {
-            console.log("error", err);
+            console.log("Error getting calendar", err);
             return;
         }
 
         if (response.items.length == 0) {
-        	console.log("No calender events found.");
+        	console.log("No calendar events found.");
         	process.exit();
         }
 

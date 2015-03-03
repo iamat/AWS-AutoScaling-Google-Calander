@@ -5,7 +5,7 @@ region: us-west-2
 google:
   clientId: 12312312
   clientSecret: 1231231
-  calenderId: my-calender
+  calendarId: my-calender
 
 aws:
   accessKeyId: key
