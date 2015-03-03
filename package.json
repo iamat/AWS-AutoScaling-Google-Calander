@@ -1,0 +1,15 @@
+{
+  "name": "aws-autoscaling-google-calendar-sync",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "googleapis": "1.1.4",
+    "config": "*",
+    "js-yaml": "*",
+    "aws-sdk": "*",
+    "open": "*",
+    "async": "*"
+  },
+  "scripts": {
+  }
+}

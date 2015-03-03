@@ -1,0 +1,13 @@
+host: http://127.0.0.1
+port: 9090
+region: us-west-2
+
+google:
+  clientId: 12312312
+  clientSecret: 1231231
+  calenderId: my-calender
+
+aws:
+  accessKeyId: key
+  secretAccessKey: secret
+  scalingGroup: my-scaling-group
