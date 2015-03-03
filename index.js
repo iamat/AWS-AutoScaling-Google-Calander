@@ -150,20 +150,20 @@ function setAutoScalingSchedule (scheduleItems) {
         };
         autoscaling.putScheduledUpdateGroupAction(params, function(err, data) {
             if (err) {
-            	console.log("autoscaling error in", item.name, err, err.stack);
+            	console.log("AutoScaling error in", item.name, err, err.stack);
             	callback(err);
             	return
             } else {
-            	console.log("autoscaling finished for", item.name);
+            	console.log("AutoScaling finished for", item.name);
             	callback(null);
             }
-        }, function (err) {
-        	if (err) {
-        		console.log("AutoScaling finished with errors", err);
-        	} else {
-        		console.log("AutoScaling finished successfuly");
-        	}
-        	process.exit();
         });
-	})
+    }, function (err) {
+    	if (err) {
+    		console.log("AutoScaling finished with errors", err);
+    	} else {
+    		console.log("AutoScaling finished successfuly");
+    	}
+    	process.exit();
+	});
 }
